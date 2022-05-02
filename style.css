@@ -1,0 +1,72 @@
+*, *::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #c21500;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffc500, #c21500);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffc500, #c21500);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.image-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.image-slider h3 {
+  color: white;
+}
+.image-slider .image {
+  position: relative;
+}
+.image-slider .image img {
+  width: 100%;
+  height: auto;
+}
+.image-slider .image .pointers {
+  position: absolute;
+  bottom: 20px;
+  left: 45%;
+  display: flex;
+  gap: 2px;
+}
+.image-slider .image .pointers i {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.image-slider .image .pointers i:hover {
+  color: red;
+  font-weight: 900;
+}
+.image-slider .image .left, .image-slider .image .right {
+  position: absolute;
+  top: 45%;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 999;
+  background: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-slider .image .left:hover, .image-slider .image .right:hover {
+  color: red;
+}
+.image-slider .image .left {
+  left: 10px;
+}
+.image-slider .image .right {
+  right: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

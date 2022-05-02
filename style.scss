@@ -1,0 +1,77 @@
+*, *::before, ::after{
+    box-sizing: border-box;
+}
+body{
+    background: #c21500;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc500, #c21500);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffc500, #c21500);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.image-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+    h3{
+        color: white;
+    }
+
+    .image{
+        position: relative;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+
+        .pointers{
+            position: absolute;
+            bottom: 20px;
+            left: 45%;
+            display: flex;
+            gap: 2px;
+
+            i{
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+
+                &:hover{
+                    color: red;
+                    font-weight: 900;
+                }
+            }
+        }
+
+
+        .left, .right{
+            position: absolute;
+            top: 45%;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 999;
+            background: black;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover{
+                color: red;
+            }
+        }
+        .left{
+            left: 10px;
+        }
+        .right{
+            right: 10px;
+        }
+    }
+}
