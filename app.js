@@ -64,7 +64,7 @@ pointersDiv.appendChild(fifthI)
 
 
 
-let index=0;
+let index = 0;
 const totalImages = images.length;
 function direction(swipe) {
     if (swipe === 'right') {
@@ -86,6 +86,7 @@ function direction(swipe) {
     }
 
     img.src = images[index]
+
 }
 
 leftSwipe.addEventListener('click', () => {
@@ -96,6 +97,19 @@ leftSwipe.addEventListener('click', () => {
     thirdI.classList.add('far')
     fourthI.classList.remove('fas')
     fourthI.classList.add('far')
+
+    if (index === 1) {
+        secondI.classList.remove('far')
+        secondI.classList.add('fas')
+    }
+    else if (index === 2) {
+        thirdI.classList.remove('far')
+        thirdI.classList.add('fas')
+    }
+    else if (index === 3) {
+        fourthI.classList.remove('far')
+        fourthI.classList.add('fas')
+    }
 })
 
 RightSwipe.addEventListener('click', () => {
@@ -106,6 +120,19 @@ RightSwipe.addEventListener('click', () => {
     thirdI.classList.add('far')
     fourthI.classList.remove('fas')
     fourthI.classList.add('far')
+
+    if (index === 1) {
+        secondI.classList.remove('far')
+        secondI.classList.add('fas')
+    }
+    else if (index === 2) {
+        thirdI.classList.remove('far')
+        thirdI.classList.add('fas')
+    }
+    else if (index === 3) {
+        fourthI.classList.remove('far')
+        fourthI.classList.add('fas')
+    }
 })
 
 firstI.addEventListener('click', () => {
@@ -117,6 +144,19 @@ firstI.addEventListener('click', () => {
     thirdI.classList.add('far')
     fourthI.classList.remove('fas')
     fourthI.classList.add('far')
+
+    if (index === 1) {
+        secondI.classList.remove('far')
+        secondI.classList.add('fas')
+    }
+    else if (index === 2) {
+        thirdI.classList.remove('far')
+        thirdI.classList.add('fas')
+    }
+    else if (index === 3) {
+        fourthI.classList.remove('far')
+        fourthI.classList.add('fas')
+    }
 })
 fifthI.addEventListener('click', () => {
     direction('right')
@@ -126,6 +166,19 @@ fifthI.addEventListener('click', () => {
     thirdI.classList.add('far')
     fourthI.classList.remove('fas')
     fourthI.classList.add('far')
+
+    if (index === 1) {
+        secondI.classList.remove('far')
+        secondI.classList.add('fas')
+    }
+    else if (index === 2) {
+        thirdI.classList.remove('far')
+        thirdI.classList.add('fas')
+    }
+    else if (index === 3) {
+        fourthI.classList.remove('far')
+        fourthI.classList.add('fas')
+    }
 })
 
 secondI.addEventListener('click', () => {
@@ -137,7 +190,7 @@ secondI.addEventListener('click', () => {
     thirdI.classList.add('far')
     fourthI.classList.remove('fas')
     fourthI.classList.add('far')
-    index=1;
+    index = 1;
 })
 thirdI.addEventListener('click', () => {
     img.src = images[2]
@@ -148,7 +201,7 @@ thirdI.addEventListener('click', () => {
     secondI.classList.add('far')
     fourthI.classList.remove('fas')
     fourthI.classList.add('far')
-    index=2;
+    index = 2;
 })
 fourthI.addEventListener('click', () => {
     img.src = images[3]
@@ -159,7 +212,7 @@ fourthI.addEventListener('click', () => {
     secondI.classList.add('far')
     thirdI.classList.remove('fas')
     thirdI.classList.add('far')
-    index=3
+    index = 3
 })
 
 // Swipe images with keyboard
@@ -173,16 +226,42 @@ window.addEventListener('keyup', (e) => {
             thirdI.classList.add('far')
             fourthI.classList.remove('fas')
             fourthI.classList.add('far')
+
+            if (index === 1) {
+                secondI.classList.remove('far')
+                secondI.classList.add('fas')
+            }
+            else if (index === 2) {
+                thirdI.classList.remove('far')
+                thirdI.classList.add('fas')
+            }
+            else if (index === 3) {
+                fourthI.classList.remove('far')
+                fourthI.classList.add('fas')
+            }
             break;
 
-            case 'ArrowRight':
-                direction('right')
-                secondI.classList.remove('fas')
-                secondI.classList.add('far')
-                thirdI.classList.remove('fas')
-                thirdI.classList.add('far')
-                fourthI.classList.remove('fas')
-                fourthI.classList.add('far')
-                break;
+        case 'ArrowRight':
+            direction('right')
+            secondI.classList.remove('fas')
+            secondI.classList.add('far')
+            thirdI.classList.remove('fas')
+            thirdI.classList.add('far')
+            fourthI.classList.remove('fas')
+            fourthI.classList.add('far')
+
+            if (index === 1) {
+                secondI.classList.remove('far')
+                secondI.classList.add('fas')
+            }
+            else if (index === 2) {
+                thirdI.classList.remove('far')
+                thirdI.classList.add('fas')
+            }
+            else if (index === 3) {
+                fourthI.classList.remove('far')
+                fourthI.classList.add('fas')
+            }
+            break;
     }
 })

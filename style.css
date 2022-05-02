@@ -43,6 +43,7 @@ body {
 .image-slider .image .pointers i:hover {
   color: red;
   font-weight: 900;
+  transition: 300ms ease-in-out;
 }
 .image-slider .image .left, .image-slider .image .right {
   position: absolute;
