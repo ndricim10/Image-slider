@@ -64,9 +64,8 @@ pointersDiv.appendChild(fifthI)
 
 
 
-let index = 0;
+let index=0;
 const totalImages = images.length;
-
 function direction(swipe) {
     if (swipe === 'right') {
         if (index === totalImages - 1) {
@@ -138,6 +137,7 @@ secondI.addEventListener('click', () => {
     thirdI.classList.add('far')
     fourthI.classList.remove('fas')
     fourthI.classList.add('far')
+    index=1;
 })
 thirdI.addEventListener('click', () => {
     img.src = images[2]
@@ -148,6 +148,7 @@ thirdI.addEventListener('click', () => {
     secondI.classList.add('far')
     fourthI.classList.remove('fas')
     fourthI.classList.add('far')
+    index=2;
 })
 fourthI.addEventListener('click', () => {
     img.src = images[3]
@@ -158,6 +159,7 @@ fourthI.addEventListener('click', () => {
     secondI.classList.add('far')
     thirdI.classList.remove('fas')
     thirdI.classList.add('far')
+    index=3
 })
 
 // Swipe images with keyboard
